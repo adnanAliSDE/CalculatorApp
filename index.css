@@ -1,0 +1,87 @@
+:root{
+  --color1:#000;
+  --color2:#fff ;
+  --color3:#dfdfdf;
+  --color4:orangered ;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  background: url(bgi.jpg);
+}
+main {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+header {
+  padding: 10px;
+  color: var(--color2);
+  background-color: var(--color1);
+}
+.calculator {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  background-color: #b3b3b3;
+}
+
+input {
+  padding: 15px 10px;
+  border: none;
+  background-color: var(--color1);
+  color: var(--color2);
+  width: 100%;
+  text-align: right;
+  font-size: 2rem;
+}
+input:focus {
+  outline: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1px;
+  grid-template-areas:
+    "o o o o"
+    "n n n x"
+    "n n n e"
+    "n n n e"
+    "n n n e"
+    "n n n e"
+}
+
+.btn {
+  background-color: var(--color2);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* .operator  {
+  background-color: var(--color3);
+  /* grid-area: o; */
+}
+#equal {
+  grid-area: e;
+  background-color: var(--color4);
+  /* width: auto; */
+  /* padding: 100% 0px; */
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
