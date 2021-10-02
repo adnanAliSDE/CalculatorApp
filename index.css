@@ -67,7 +67,7 @@ input:focus {
 .equal {
   grid-area: e;
   background-color: #e95824;
-  padding: 65% 0px;
+  padding: 100% 0px;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
